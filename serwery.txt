@@ -1,6 +1,4 @@
-e=srv07
-f=srv08
-g=srv09
+
 h=srv10
 i=srv11
 j=srv12
