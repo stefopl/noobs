@@ -33,4 +33,4 @@ jobs:
 
     - name: Create Pull Request
       run: |
-        hub pull-request -m "Update serwery.txt" -b main -h feature/update-serwery-txt
+        gh pr create --base main --head feature/update-serwery-txt --title "Update serwery.txt" --body "Update serwery.txt"
