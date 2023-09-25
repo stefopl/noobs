@@ -1,9 +1,14 @@
-name: Update serwery.txt
+name: Create Pull Request for serwery.txt
 
 on:
   push:
     branches:
-      - main  # Zmieniaj na główną gałąź, jeśli to inna gałąź
+      - main
+  pull_request:
+    types:
+      - closed
+  schedule:
+    - cron: "0 0 * * 0"  # Raz w tygodniu w niedzielę o północy
 
 jobs:
   update-serwery:
@@ -21,3 +26,7 @@ jobs:
         git add serwery.txt
         git commit -m "Update serwery.txt"
         git push
+
+    - name: Create Pull Request
+      run: |
+        hub pull-request -m "Update serwery.txt"
