@@ -8,7 +8,7 @@ on:
     types:
       - closed
   schedule:
-    - cron: "0 0 * * 0"  # Raz w tygodniu w niedzielę o północy
+    - cron: "0 0 * * 0"
 
 jobs:
   update-serwery:
@@ -21,12 +21,16 @@ jobs:
     - name: Download serwery.txt
       run: |
         wget -O serwery.txt https://mikr.us/serwery.txt
+
+    - name: Create or use a feature branch
+      run: |
+        git checkout -b feature/update-serwery-txt
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add serwery.txt
         git commit -m "Update serwery.txt"
-        git push
+        git push origin feature/update-serwery-txt
 
     - name: Create Pull Request
       run: |
-        hub pull-request -m "Update serwery.txt"
+        hub pull-request -m "Update serwery.txt" -b main -h feature/update-serwery-txt
