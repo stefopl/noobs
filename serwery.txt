@@ -1,0 +1,17 @@
+e=srv07
+f=srv08
+g=srv09
+h=srv10
+i=srv11
+j=srv12
+k=srv14
+l=srv15
+m=srv16
+n=srv17
+o=srv18
+p=srv19
+r=srv20
+s=srv21
+q=mini01
+x=maluch
+y=maluch2
