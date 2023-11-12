@@ -13,6 +13,7 @@ p=srv19
 r=srv20
 s=srv21
 t=srv22
+u=srv23
 q=mini01
 x=maluch
 y=maluch2
