@@ -15,5 +15,6 @@ s=srv21
 t=srv22
 u=srv23
 w=srv24
+z=srv25
 x=maluch
 y=maluch2
