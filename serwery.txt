@@ -18,3 +18,5 @@ w=srv24
 z=srv25
 x=maluch
 y=maluch2
+a=srv26
+b=srv27
